@@ -1,0 +1,22 @@
+public class MethodReference {
+
+
+    public static void saySomething(){
+        System.out.println("Hello, this is static method.");
+    }
+
+    public static void main(String[] args) {
+        Sayable sayable = MethodReference::saySomething;
+        sayable.say();
+    }
+
+}
+
+@FunctionalInterface
+interface Drawable{
+    public void draw(String s);
+}
+
+interface Sayable{
+    void say();
+}
